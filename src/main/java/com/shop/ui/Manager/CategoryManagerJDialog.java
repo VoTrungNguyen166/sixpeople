@@ -10,6 +10,8 @@ import com.shop.dao.CategoryDAO;
 import com.shop.dao.impl.CategoryDAOImpl;
 import com.shop.entity.Category;
 import com.shop.util.XDialog;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Frame;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -25,8 +27,12 @@ public class CategoryManagerJDialog extends JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setIconImage(new ImageIcon(getClass().getResource("/images/Shop_logo.png")).getImage());
+        tblCategories.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
+tblCategories.getTableHeader().setBackground(new Color(240, 240, 240));
+tblCategories.getTableHeader().setForeground(Color.WHITE);
     }
 
+    
     CategoryDAO dao = new CategoryDAOImpl();
     List<Category> items = List.of();
 
@@ -221,15 +227,24 @@ public class CategoryManagerJDialog extends JFrame {
         txtName = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Quản lý loại quần áo");
+        setTitle("Khuyến mãi sản phẩm");
+        setBackground(new java.awt.Color(255, 255, 255));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
         });
 
+        tabs.setBackground(new java.awt.Color(255, 255, 255));
+        tabs.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tabs.setOpaque(true);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new java.awt.BorderLayout(0, 5));
 
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        tblCategories.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tblCategories.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -253,6 +268,7 @@ public class CategoryManagerJDialog extends JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblCategories.setGridColor(new java.awt.Color(255, 255, 255));
         tblCategories.setRowHeight(25);
         tblCategories.setRowMargin(1);
         tblCategories.setSelectionBackground(new java.awt.Color(255, 255, 0));
@@ -269,8 +285,12 @@ public class CategoryManagerJDialog extends JFrame {
 
         jPanel1.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 2, 2));
 
+        btnCheckAll.setBackground(new java.awt.Color(0, 0, 0));
+        btnCheckAll.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCheckAll.setForeground(new java.awt.Color(255, 255, 255));
         btnCheckAll.setText("Chọn tất cả");
         btnCheckAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -279,6 +299,9 @@ public class CategoryManagerJDialog extends JFrame {
         });
         jPanel3.add(btnCheckAll);
 
+        btnUncheckAll.setBackground(new java.awt.Color(0, 0, 0));
+        btnUncheckAll.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnUncheckAll.setForeground(new java.awt.Color(255, 255, 255));
         btnUncheckAll.setText("Bỏ chọn tất cả");
         btnUncheckAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -287,6 +310,9 @@ public class CategoryManagerJDialog extends JFrame {
         });
         jPanel3.add(btnUncheckAll);
 
+        btnDeleteCheckedItems.setBackground(new java.awt.Color(0, 0, 0));
+        btnDeleteCheckedItems.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDeleteCheckedItems.setForeground(new java.awt.Color(255, 255, 255));
         btnDeleteCheckedItems.setText("Xóa các mục chọn");
         btnDeleteCheckedItems.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,12 +325,19 @@ public class CategoryManagerJDialog extends JFrame {
 
         tabs.addTab("DANH SÁCH", jPanel1);
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new java.awt.BorderLayout(0, 5));
 
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(new java.awt.GridLayout(1, 0, 2, 2));
 
+        btnCreate.setBackground(new java.awt.Color(0, 0, 0));
+        btnCreate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCreate.setForeground(new java.awt.Color(255, 255, 255));
+        btnCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Create.png"))); // NOI18N
         btnCreate.setText("Tạo mới");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -313,6 +346,9 @@ public class CategoryManagerJDialog extends JFrame {
         });
         jPanel7.add(btnCreate);
 
+        btnUpdate.setBackground(new java.awt.Color(0, 0, 0));
+        btnUpdate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
         btnUpdate.setText("Cập nhật");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -321,6 +357,9 @@ public class CategoryManagerJDialog extends JFrame {
         });
         jPanel7.add(btnUpdate);
 
+        btnDelete.setBackground(new java.awt.Color(0, 0, 0));
+        btnDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Xóa");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -329,6 +368,9 @@ public class CategoryManagerJDialog extends JFrame {
         });
         jPanel7.add(btnDelete);
 
+        btnClear.setBackground(new java.awt.Color(0, 0, 0));
+        btnClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(255, 255, 255));
         btnClear.setText("Nhập mới");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -339,8 +381,12 @@ public class CategoryManagerJDialog extends JFrame {
 
         jPanel4.add(jPanel7, java.awt.BorderLayout.LINE_START);
 
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setLayout(new java.awt.GridLayout(1, 0, 2, 2));
 
+        btnMoveFirst.setBackground(new java.awt.Color(0, 0, 0));
+        btnMoveFirst.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnMoveFirst.setForeground(new java.awt.Color(255, 255, 255));
         btnMoveFirst.setText("|<");
         btnMoveFirst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -349,6 +395,9 @@ public class CategoryManagerJDialog extends JFrame {
         });
         jPanel8.add(btnMoveFirst);
 
+        btnMovePrevious.setBackground(new java.awt.Color(0, 0, 0));
+        btnMovePrevious.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnMovePrevious.setForeground(new java.awt.Color(255, 255, 255));
         btnMovePrevious.setText("<<");
         btnMovePrevious.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -357,6 +406,9 @@ public class CategoryManagerJDialog extends JFrame {
         });
         jPanel8.add(btnMovePrevious);
 
+        btnMoveNext.setBackground(new java.awt.Color(0, 0, 0));
+        btnMoveNext.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnMoveNext.setForeground(new java.awt.Color(255, 255, 255));
         btnMoveNext.setText(">>");
         btnMoveNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -365,6 +417,9 @@ public class CategoryManagerJDialog extends JFrame {
         });
         jPanel8.add(btnMoveNext);
 
+        btnMoveLast.setBackground(new java.awt.Color(0, 0, 0));
+        btnMoveLast.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnMoveLast.setForeground(new java.awt.Color(255, 255, 255));
         btnMoveLast.setText(">|");
         btnMoveLast.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -374,20 +429,36 @@ public class CategoryManagerJDialog extends JFrame {
         jPanel8.add(btnMoveLast);
 
         jPanel4.add(jPanel8, java.awt.BorderLayout.LINE_END);
+
+        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setOpaque(true);
         jPanel4.add(jSeparator1, java.awt.BorderLayout.PAGE_START);
 
         jPanel2.add(jPanel4, java.awt.BorderLayout.PAGE_END);
 
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(new java.awt.GridLayout(0, 1, 5, 5));
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setText("Mã loại");
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel1.setOpaque(true);
         jPanel6.add(jLabel1);
+
+        txtId.setOpaque(true);
         jPanel6.add(txtId);
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setText("Tên loại");
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel2.setOpaque(true);
         jPanel6.add(jLabel2);
+
+        txtName.setOpaque(true);
         jPanel6.add(txtName);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -404,7 +475,7 @@ public class CategoryManagerJDialog extends JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel5, java.awt.BorderLayout.CENTER);
@@ -415,17 +486,11 @@ public class CategoryManagerJDialog extends JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tabs, javax.swing.GroupLayout.DEFAULT_SIZE, 689, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(tabs, javax.swing.GroupLayout.DEFAULT_SIZE, 731, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(tabs, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(tabs, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
         );
 
         pack();

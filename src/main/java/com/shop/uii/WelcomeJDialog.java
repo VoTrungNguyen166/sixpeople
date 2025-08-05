@@ -54,18 +54,11 @@ public class WelcomeJDialog extends javax.swing.JDialog implements WelcomeContro
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jLabel1 = new javax.swing.JLabel();
-        lblNumber = new javax.swing.JLabel();
-        ProgressBar = new javax.swing.JProgressBar();
-        jLabel3 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-
-        jToggleButton1.setText("jToggleButton1");
+        jLabel1 = new javax.swing.JLabel();
+        ProgressBar = new javax.swing.JProgressBar();
+        lblNumber = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -76,34 +69,23 @@ public class WelcomeJDialog extends javax.swing.JDialog implements WelcomeContro
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setText("SHOP THỜI TRANG");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 440, -1, -1));
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 440, -1, -1));
+        jPanel5.add(ProgressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 420, 20));
 
         lblNumber.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblNumber.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblNumber.setText("0%");
-        getContentPane().add(lblNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 420, 70, 20));
-        getContentPane().add(ProgressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 420, 20));
+        jPanel5.add(lblNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 420, 70, 20));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Shop_logo.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 500, 490));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Shop_logo.png"))); // NOI18N
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, -1, -1));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 190, 530));
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(jPanel3);
-
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(jPanel4);
-
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 120, 540));
-
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, 470, 30));
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -166,13 +148,8 @@ public class WelcomeJDialog extends javax.swing.JDialog implements WelcomeContro
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JProgressBar ProgressBar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JLabel lblNumber;
     // End of variables declaration//GEN-END:variables
 }
