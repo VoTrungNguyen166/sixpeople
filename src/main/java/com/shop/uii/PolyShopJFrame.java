@@ -5,6 +5,9 @@
 package com.shop.uii;
 
 import com.shop.util.XIcon;
+import java.awt.event.ActionEvent;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.ImageIcon;
 
 /**
@@ -18,9 +21,15 @@ public final class PolyShopJFrame extends javax.swing.JFrame implements PolyShop
      */
     public PolyShopJFrame() {
         initComponents();
-        setLocationRelativeTo(null);
-        this.init();
-        setIconImage(new ImageIcon(getClass().getResource("/images/Shop_logo.png")).getImage());
+    setLocationRelativeTo(null);
+    this.init();
+    setIconImage(new ImageIcon(getClass().getResource("/images/Shop_logo.png")).getImage());
+    
+    // Khởi tạo đồng hồ
+    javax.swing.Timer timer = new javax.swing.Timer(1000, (ActionEvent e) -> {
+        lblClock.setText(new SimpleDateFormat("HH:mm:ss - dd/MM/yyyy").format(new Date()));
+    });
+    timer.start();
     }
 
     @Override
@@ -51,6 +60,7 @@ public final class PolyShopJFrame extends javax.swing.JFrame implements PolyShop
         btnExit = new javax.swing.JButton();
         btnRevenueManager = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        lblClock = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 255, 255));
@@ -59,7 +69,7 @@ public final class PolyShopJFrame extends javax.swing.JFrame implements PolyShop
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Anhbia.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 760, 550));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
         btnBillManager.setBackground(new java.awt.Color(0, 0, 0));
         btnBillManager.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -74,7 +84,7 @@ public final class PolyShopJFrame extends javax.swing.JFrame implements PolyShop
         btnCategoryManager.setBackground(new java.awt.Color(0, 0, 0));
         btnCategoryManager.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnCategoryManager.setForeground(new java.awt.Color(255, 255, 255));
-        btnCategoryManager.setText("KHUYẾN MÃI");
+        btnCategoryManager.setText("LOẠI SẢN PHẨM");
         btnCategoryManager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCategoryManagerActionPerformed(evt);
@@ -104,7 +114,7 @@ public final class PolyShopJFrame extends javax.swing.JFrame implements PolyShop
         btnDrinkManager.setBackground(new java.awt.Color(0, 0, 0));
         btnDrinkManager.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnDrinkManager.setForeground(new java.awt.Color(255, 255, 255));
-        btnDrinkManager.setText("SẢN PHẨM");
+        btnDrinkManager.setText("KHUYẾN MÃI");
         btnDrinkManager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDrinkManagerActionPerformed(evt);
@@ -114,7 +124,7 @@ public final class PolyShopJFrame extends javax.swing.JFrame implements PolyShop
         btnSales.setBackground(new java.awt.Color(0, 0, 0));
         btnSales.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSales.setForeground(new java.awt.Color(255, 255, 255));
-        btnSales.setText("BÁN HÀNG");
+        btnSales.setText("BÁN HÀNG ");
         btnSales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalesActionPerformed(evt);
@@ -214,6 +224,7 @@ public final class PolyShopJFrame extends javax.swing.JFrame implements PolyShop
 
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 270, -1, -1));
+        getContentPane().add(lblClock, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, 230, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -446,5 +457,6 @@ public final class PolyShopJFrame extends javax.swing.JFrame implements PolyShop
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblClock;
     // End of variables declaration//GEN-END:variables
 }
