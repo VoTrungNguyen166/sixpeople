@@ -83,7 +83,7 @@ public class WelcomeJDialog extends javax.swing.JDialog implements WelcomeContro
         jPanel5.add(lblNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 420, 70, 20));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Shop_logo.png"))); // NOI18N
-        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, -1, -1));
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, -1, -1));
 
         getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 500));
 

@@ -28,7 +28,7 @@ public class CategoryManagerJDialog extends JFrame {
         setLocationRelativeTo(null);
         setIconImage(new ImageIcon(getClass().getResource("/images/Shop_logo.png")).getImage());
         tblCategories.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
-tblCategories.getTableHeader().setBackground(new Color(240, 240, 240));
+tblCategories.getTableHeader().setBackground(new Color(255, 255, 255));
 tblCategories.getTableHeader().setForeground(Color.WHITE);
     }
 

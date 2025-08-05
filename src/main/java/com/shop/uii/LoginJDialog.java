@@ -32,6 +32,7 @@ public class LoginJDialog extends JFrame {
     }
 
     
+    
     public void login() {
     String username = txtName.getText();
     String password = txtPass.getText();
@@ -50,12 +51,22 @@ public class LoginJDialog extends JFrame {
         this.dispose();
 
         // Mở giao diện chính sau khi đăng nhập thành công
-        java.awt.EventQueue.invokeLater(() -> {
-            PolyShopJFrame  mainFrame = new PolyShopJFrame();
-             mainFrame.setVisible(true);
-        });
+        if (username.equals("manager1")) {
+            java.awt.EventQueue.invokeLater(() -> {
+                PolyShopJFrame mainFrame = new PolyShopJFrame();
+                mainFrame.setVisible(true);
+            });
+        } else if (username.equals("user1")) {
+            java.awt.EventQueue.invokeLater(() -> {
+                PolyNhanvienJFrame mainFrame = new PolyNhanvienJFrame();
+                mainFrame.setVisible(true);
+            });
+        } else {
+            XDialog.alert("Tài khoản không có quyền truy cập!");
+        }
     }
 }
+
     
     
     /**
