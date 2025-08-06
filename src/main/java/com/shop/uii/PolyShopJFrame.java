@@ -84,7 +84,7 @@ public final class PolyShopJFrame extends javax.swing.JFrame implements PolyShop
         btnCategoryManager.setBackground(new java.awt.Color(0, 0, 0));
         btnCategoryManager.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnCategoryManager.setForeground(new java.awt.Color(255, 255, 255));
-        btnCategoryManager.setText("LOẠI SẢN PHẨM");
+        btnCategoryManager.setText("KHUYẾN MÃI");
         btnCategoryManager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCategoryManagerActionPerformed(evt);
@@ -114,7 +114,7 @@ public final class PolyShopJFrame extends javax.swing.JFrame implements PolyShop
         btnDrinkManager.setBackground(new java.awt.Color(0, 0, 0));
         btnDrinkManager.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnDrinkManager.setForeground(new java.awt.Color(255, 255, 255));
-        btnDrinkManager.setText("KHUYẾN MÃI");
+        btnDrinkManager.setText("LOẠI SẢN PHẨM");
         btnDrinkManager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDrinkManagerActionPerformed(evt);
